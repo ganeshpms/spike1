@@ -33,5 +33,25 @@
   <!-- 3. Display the application -->
   <body>
     <my-app>Loading...</my-app>
+<div class="login jumbotron center-block">
+    <h1>Login</h1>
+    <form role="form" (submit)="login($event, username.value, password.value)">
+        <a class="btn btn-block btn-social btn-facebook" (click)="login_facebook($event)">
+            <span class="fa fa-facebook"></span> Sign in with Facebook
+        </a>
+        <a class="btn btn-block btn-social btn-twitter" (click)="login_twitter($event)">
+            <span class="fa fa-twitter"></span> Sign in with Twitter
+        </a>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" #username class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" #password class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
   </body>
 </html>
